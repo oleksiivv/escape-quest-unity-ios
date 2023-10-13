@@ -69,12 +69,6 @@ public class BaseUI : MonoBehaviour
         pausePanel.SetActive(active);
 
         if(active){
-            if(addCnt%2 == 0){
-                if(Advertisement.IsReady("Interstitial_Android") && !alreadShowedAd){
-                    Advertisement.Show("Interstitial_Android");
-                    alreadShowedAd = true;
-                }
-            }
             addCnt++;
         }
     }
@@ -85,8 +79,8 @@ public class BaseUI : MonoBehaviour
         if(active){
             if(addCnt%2 == 0){
                 if(!admob.showIntersitionalAd()){
-                    if(Advertisement.IsReady("Interstitial_Android") && !alreadShowedAd){
-                        Advertisement.Show("Interstitial_Android");
+                    if(!alreadShowedAd){
+                        //show interstitial
                         alreadShowedAd = true;
                     }
                 }
@@ -100,8 +94,8 @@ public class BaseUI : MonoBehaviour
 
         if(active){
             if(addCnt%2 == 0){
-                if(Advertisement.IsReady("Interstitial_Android") && !alreadShowedAd){
-                    Advertisement.Show("Interstitial_Android");
+                if(!alreadShowedAd){
+                    //show interstitial
                     alreadShowedAd = true;
                 }
             }
