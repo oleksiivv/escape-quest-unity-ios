@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-using UnityEngine.Advertisements;
+//using UnityEngine.Advertisements;
 
 public class BaseUI : MonoBehaviour
 {
@@ -19,7 +19,7 @@ public class BaseUI : MonoBehaviour
     public AdmobController admob;
 
     void Start(){
-        Advertisement.Initialize(appId, false);
+        //Advertisement.Initialize(appId, false);
     }
 
     public void pause(){
@@ -77,14 +77,14 @@ public class BaseUI : MonoBehaviour
         deathPanel.SetActive(active);
 
         if(active){
-            if(addCnt%2 == 0){
+            //if(addCnt%2 == 0){
                 if(!admob.showIntersitionalAd()){
                     if(!alreadShowedAd){
                         //show interstitial
                         alreadShowedAd = true;
                     }
                 }
-            }
+            //}
             addCnt++;
         }
     }
