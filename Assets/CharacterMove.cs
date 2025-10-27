@@ -40,7 +40,7 @@ public class CharacterMove : MonoBehaviour
         }
         else{
             // Stop moving and reset the velocity to zero to stop the character when input stops.
-            characterRb.velocity = Vector3.zero;
+            characterRb.linearVelocity = Vector3.zero;
             characterAnimator.SetBool("run", false);
         }
     }

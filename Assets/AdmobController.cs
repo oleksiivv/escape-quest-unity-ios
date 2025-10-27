@@ -27,8 +27,8 @@ public class AdmobController : MonoBehaviour
         MobileAds.Initialize(initStatus => {
             LoadLoadInterstitialAd();
 
-            CreateBannerView();
-            LoadBannerAd();
+            //CreateBannerView();
+            //LoadBannerAd();
         });
     }
 
